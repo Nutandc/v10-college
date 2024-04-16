@@ -1,0 +1,63 @@
+1. Migration -- Database Schema
+2. Model
+
+ migrations-
+    id --primary key
+    name
+    email
+    address
+    phone
+    open_hours
+    close_hours
+
+//CRUD OR Record Of Student.
+
+1. url=/students (Route to controller redirect.)
+2 migration =create_students_table
+3 Model
+4 controller's function
+records of students
+
+-form on blade
+-on submit, submit the form and store the records.
+
+
+
+---march 26----
+
+Company -id, name, address, est_date, types, status
+-- /
+
+edit, update, delete
+
+
+
+Company CRUD
+    'name','email','address', phone_number, total_grade ( drop down values=1-10 --enum ra totally validated using in:)
+    --proper validation 
+    --complete CRUD
+    --redirection
+    --validation message show
+    --old values 
+    --delete using delete method 
+    --confirmation before delete
+
+Colleges CRUD
+    name, phone_number, number_of_teacher, no_of_student, et_date, total_class, opening_hour(time) closing hour, teacher_gender (male, female, oher)
+     --proper validation  (phone_number should be 10 digit, 
+                            et_date most be date,  opening_hour most be time, 
+                            no_of_student most be exactly 100
+                            )
+    --complete CRUD
+    --redirection
+    --validation message show
+    --old values 
+    --delete using delete method 
+    --confirmation before delete
+
+
+    CRUD, aDVANCE ... Resource pattern, Validation Request use, Create Function Through MOdel.
+
+
+    //User Registration and login 
+    
