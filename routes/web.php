@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth'], function ($router) {
     $router->get('/home', [HomeController::class, 'index'])->name('home');
     $router->resource('departments', DepartmentController::class);
+    $router->resource('courses', CourseController::class);
 });
 //login
 ROute::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

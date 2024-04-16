@@ -29,37 +29,32 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form class="form-horizontal" action="{{route('departments.store')}}">
+                    <form class="form-horizontal" action="{{route('departments.store')}}" method="post">
+                        @csrf
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                <label for="name" class="col-sm-2 control-label">Name</label>
 
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                    <input type="text" id="name" placeholder="Name"
+                                           class="form-control @error('name') is-invalid @enderror" name="name"
+                                           value="{{ old('name') }}" autocomplete="name" autofocus>
+                                    {{--                                    @if($errors->has('name'))--}}
+                                    @error('name')
+                                    <span class="help-block">{{$errors->first('name')}}</span>
+                                    @enderror
+                                    {{--                                    @endif--}}
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3"
-                                           placeholder="Password">
-                                </div>
+
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Remember me
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+
+
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
                             <a href="{{route('departments.index')}}" class="btn btn-default">Cancel</a>
-{{--                            <button type="submit" class="btn btn-default">Cancel</button>--}}
+                            {{--                            <button type="submit" class="btn btn-default">Cancel</button>--}}
                             <button type="submit" class="btn btn-info pull-right">Submit</button>
                         </div>
                         <!-- /.box-footer -->

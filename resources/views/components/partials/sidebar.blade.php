@@ -60,6 +60,13 @@
 {{--              <small class="label pull-right bg-green">new</small>--}}
             </span>
                 </a>
+            </li>            <li>
+                <a href="{{route('courses.index')}}">
+                    <i class="fa fa-cc-diners-club"></i> <span>Courses</span>
+                    <span class="pull-right-container">
+{{--              <small class="label pull-right bg-green">new</small>--}}
+            </span>
+                </a>
             </li>
         </ul>
     </section>
